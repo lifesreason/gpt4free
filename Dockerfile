@@ -15,7 +15,7 @@ RUN pip install -r requirements.txt
 # RUN pip config set global.trusted-host mirrors.aliyun.com
 
 FROM python:3.11-alpine
-
+RUN pip install numpy && pip install setuptools
 WORKDIR /usr/app
 ENV PATH="/usr/app/venv/bin:$PATH"
 
